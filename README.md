@@ -13,8 +13,36 @@ Complete documentation is available in our docs folder:
 
 ## Installation
 
+### Option 1: Install from PyPI
 ```bash
 pip install ddataframe
+```
+
+### Option 2: Direct Download from Google Drive
+Download the package files:
+- [ddataframe-0.1.0.tar.gz](https://drive.google.com/file/d/1tX_aOFfv6jCXqm0uo3ySV5raxp9gbFTy/view?usp=sharing)
+- [ddataframe-0.1.0-py3-none-any.whl](https://drive.google.com/file/d/1pyGd84jAhAgPrqcsB6LMW9af3aV2Jxlz/view?usp=sharing)
+
+Then install using either:
+```bash
+# If you downloaded the tar.gz file:
+pip install ddataframe-0.1.0.tar.gz
+
+# If you downloaded the wheel file:
+pip install ddataframe-0.1.0-py3-none-any.whl
+```
+
+Note: Make sure you're in the directory where you downloaded the files before running the install command.
+
+### Option 3: Clone and Install
+
+```bash
+git clone https://github.com/pathik-code/ddataframe.git
+cd ddataframe
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Features
