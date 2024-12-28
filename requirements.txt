@@ -1,0 +1,23 @@
+# Data manipulation and analysis library
+pandas>=1.0.0
+
+# Generate fake data for testing and development
+Faker>=8.0.0
+
+# Testing framework for Python
+pytest>=7.0.0
+
+# Code coverage plugin for pytest
+pytest-cov>=4.0.0
+
+# Build Python packages (wheels and distributions)
+build>=1.0.0
+
+# Upload packages to PyPI (Python Package Index)
+twine>=4.0.0
+
+# Optional but recommended:
+# black>=22.0.0         # Code formatting
+# flake8>=4.0.0        # Code linting
+# mypy>=0.900          # Static type checking
+# sphinx>=4.0.0        # Documentation generator
