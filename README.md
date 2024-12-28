@@ -1,6 +1,15 @@
 # DDataFrame
 
-A Python package for generating synthetic data using Faker and pandas, making it easy to create test datasets with realistic-looking data.
+A Python package for generating synthetic DataFrames with fake data for testing and development purposes.
+
+## Documentation
+
+Complete documentation is available in our docs folder:
+
+- [Main Documentation](docs/DOCUMENTATION.md) - Full API reference and supported data types
+- [Examples](docs/EXAMPLES.md) - Code examples and use cases
+- [Testing Guide](docs/TESTING.md) - Installation and testing instructions
+- [Build Guide](docs/BUILD.md) - Package building and distribution
 
 ## Installation
 
