@@ -6,7 +6,9 @@ __pycache__/
 .Python
 
 # Build directories
-dist/
+dist/*
+!dist/ddataframe-0.1.0.tar.gz
+!dist/ddataframe-0.1.0-py3-none-any.whl
 build/
 *.egg-info/
 
