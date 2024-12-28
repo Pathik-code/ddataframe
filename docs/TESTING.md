@@ -6,16 +6,21 @@
 ```bash
 git clone https://github.com/pathik-code/ddataframe.git
 cd ddataframe
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+python -m venv penv
+source penv/bin/activate  # On Windows: penv\Scripts\activate
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt  # Note: use 'pip' not 'python'
 pip install -e .
 ```
 
-2. Install test dependencies:
-```bash
-pip install pytest pytest-cov
-```
+3. Common Installation Issues:
+   - Command `python install`: Use `pip install` instead
+   - Missing requirements.txt: Create file if not exists
+   - Permission errors: Try with `pip install --user`
+   - Virtual environment not activated: Ensure you see (penv) in prompt
 
 ## Running Tests
 
@@ -36,14 +41,15 @@ The coverage report shows:
 ```python
 from ddataframe import DDataFrame
 
-# Basic example
+# Basic example with locale
 df = DDataFrame.generate(
     rows=5,
     columns={
         'name': 'name',
         'email': 'email',
         'age': {'type': 'random_int', 'min': 18, 'max': 90}
-    }
+    },
+    locale='en_US'
 )
 print(df)
 ```
@@ -55,9 +61,21 @@ df = DDataFrame.generate(
     rows=10,
     columns={
         'name': 'name',
-        'join_date': {'type': 'date', 'start_date': '-5y', 'end_date': 'today'},
-        'salary': {'type': 'random_float', 'min': 30000, 'max': 120000, 'precision': 2},
-        'department': {'type': 'random_element', 'elements': ['HR', 'IT', 'Sales', 'Marketing']}
+        'join_date': {
+            'type': 'date',
+            'start_date': '-5y',
+            'end_date': 'today'
+        },
+        'salary': {
+            'type': 'random_float',
+            'min': 30000,
+            'max': 120000,
+            'precision': 2
+        },
+        'department': {
+            'type': 'random_element',
+            'elements': ['HR', 'IT', 'Sales', 'Marketing']
+        }
     }
 )
 print(df.head())
